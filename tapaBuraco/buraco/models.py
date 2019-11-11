@@ -4,7 +4,7 @@ from django.db import models
 
 class User(models.Model):
 	name = models.CharField(max_length=50)
-	holesDetected = models.IntegerField(max_length=20)
+	holesDetected = models.IntegerField()
 	totalAvgAcc = models.FloatField()
 
 class Buraco(models.Model):

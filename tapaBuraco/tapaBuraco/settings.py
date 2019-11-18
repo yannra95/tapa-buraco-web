@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'buraco.apps.BuracoConfig'
+    'buraco.apps.BuracoConfig',
+    'client.apps.ClientConfig'
 ]
 
 MIDDLEWARE = [

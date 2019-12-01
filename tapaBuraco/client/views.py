@@ -1,11 +1,15 @@
 from django.shortcuts import render
 
-from client.forms import Form
+from buraco.forms import *
 
-# Create your views here.
 def index(request):
+    loginForm = LoginForm()
+    return render(request, 'client/login.html', {'loginForm': loginForm})
+
+def enviar(request, usuario_id):
 	form = Form()
-	return render(request, 'client/index.html',  {'form': form})
+	print("--------------- ID do usuário", usuario_id)
+	return render(request, 'client/enviar.html', {'form': form, 'usuario_id': usuario_id})
 
 def sucesso(request):
 	return render(request, 'client/sub_sucesso.html')

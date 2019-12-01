@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aplicação cliente - Tapa Buraco</title>
+</head>
+<body>
+<form action="/receber/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type='hidden' name="usuario_id" value={{ usuario_id }}/>
+    <input type="submit" value="Enviar">
+</form>
+</body>
+</html>

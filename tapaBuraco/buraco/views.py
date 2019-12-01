@@ -27,8 +27,10 @@ def get_name(request):
 def paginaInicial(request):
 	# descricao = 'Uma desc dinamica'
 	# return render(request, 'buraco/index.html', {'desc': descricao})
-	return render(request, 'buraco/index.html')
+	return render(request, 'index.html')
 
-def dashboard(request):
-    return render(request, "dashboard.html")
+def dashburacos(request):
+    return render(request, "dash_buracos.html")
 
+def dashagentes(request):
+    return render(request, "dash_agentes.html")

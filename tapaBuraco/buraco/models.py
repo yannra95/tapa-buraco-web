@@ -19,6 +19,8 @@ class Buraco(models.Model):
 	longitude = models.DecimalField(max_digits=20, decimal_places=7)
 	acc =  models.FloatField()
 	cidadao = models.ManyToManyField(Cidadao,blank=True, null=True)
+	situacao = models.CharField(max_length=50, default="Não resolvido")
+	data_adicao = models.DateTimeField(auto_now=True)
 
 class Agente(models.Model):
 	userid = models.ForeignKey(Usuario, on_delete=models.CASCADE)

@@ -51,5 +51,4 @@ $(function() {
     output: '{startRow} - {endRow} / {filteredRows} ({totalRows})'
 
   });
-
 });

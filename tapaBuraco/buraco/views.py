@@ -59,7 +59,7 @@ def login(request):
                     pass
 
                 if agente != None:
-                    return HttpResponseRedirect('/painel')
+                    return HttpResponseRedirect('/buracos')
                 else:
                     return HttpResponseRedirect('/client/'+str(cidadao.id)+'/enviar')
             except Usuario.DoesNotExist:
@@ -77,6 +77,8 @@ def paginaInicial(request):
     loginForm = LoginForm()
     return render(request, 'login.html', {'loginForm': loginForm})
 
-def dashboard(request):
-    return render(request, "dashboard.html")
+def dashburacos(request):
+    return render(request, "dash_buracos.html")
 
+def dashagentes(request):
+    return render(request, "dash_agentes.html")
